@@ -28,9 +28,11 @@ const SignUp = () => {
     //pass a param to handle values
     onSubmit : (values) => {
      values
+     
     }
-  })  
-  console.log(handleSubmit)
+  })
+  console.log(values)  
+
 
   return (
     <div className='flex justify-center items-center bg-slate-300 rounded-sm '>
