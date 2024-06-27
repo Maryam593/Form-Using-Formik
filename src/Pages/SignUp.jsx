@@ -12,6 +12,7 @@ and hooks that can help simplify building forms in React. Formik
 can handle tasks such as tracking field values, handling form validation and submission, and managing state and change handlers
 */
 import { useFormik } from 'formik';
+import SignUpSchema from '../schema';
 //like creating an object to store key - pair value -> concept of dictionary 
 const initialValues = {
   //it must be same -> form : name ->this will put here in intial values thats why it must be same in order to retrieve data 
@@ -26,11 +27,15 @@ const SignUp = () => {
   const {values,handleChange,handleBlur,handleSubmit,errors} = useFormik({
     initialValues : initialValues, 
     //pass a param to handle values
+
+    //calling validation schema 
+    validationSchema: SignUpSchema,
     onSubmit : (values) => {
       console.log("Form submitted:", values);
      values
      
     }
+  
   })
  // console.log(values)  
 
