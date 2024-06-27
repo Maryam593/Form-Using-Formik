@@ -27,15 +27,16 @@ const SignUp = () => {
     initialValues : initialValues, 
     //pass a param to handle values
     onSubmit : (values) => {
+      console.log("Form submitted:", values);
      values
      
     }
   })
-  console.log(values)  
+ // console.log(values)  
 
 
   return (
-    <div className='flex justify-center items-center bg-slate-300 rounded-sm '>
+    <div className='flex justify-center items-center rounded-sm '>
       <form action="" onSubmit={handleSubmit}>
         <input type="text" name="firstName" id="firstName" placeholder='enter your firstname here'
          className='border-solid border-2 border-sky-950 rounded-3xl p-2 mb-5' value={values.firstName}
@@ -58,7 +59,9 @@ const SignUp = () => {
         onChange={handleChange} onBlur={handleBlur}/>
         <br />
         {/* type must be submit .. so onsubmit can actually work out */}
-        <button type='submit'>SignUp</button>
+        <button className="input-button bg-black text-white w-24 p-2" type="submit">
+                      SignUp
+                    </button>
       </form>
     </div>
   )
