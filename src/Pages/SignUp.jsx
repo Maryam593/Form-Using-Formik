@@ -32,6 +32,8 @@ const SignUp = () => {
     onSubmit : (values,action) => {
       console.log("Form submitted:", values);
      values
+     //action is use to perform actions like this restFORM
+     //RestForm is basically reseting the form when submit button is clicked!
      action.resetForm();
     }
 
