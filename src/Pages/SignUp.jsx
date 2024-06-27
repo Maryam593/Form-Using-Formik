@@ -36,6 +36,7 @@ const SignUp = () => {
      //RestForm is basically reseting the form when submit button is clicked!
      action.resetForm();
     }
+    
 
   })
   console.log(errors)
