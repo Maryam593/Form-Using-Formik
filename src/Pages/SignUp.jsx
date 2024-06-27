@@ -23,18 +23,18 @@ const initialValues = {
 }
 const SignUp = () => {
   //use fromik pass two params : initial values , submission function
-  const {values,handleChange,handleBlur,handleSubmit} = useFormik({
+  const {values,handleChange,handleBlur,handleSubmit,errors} = useFormik({
     initialValues : initialValues, 
     //pass a param to handle values
     onSubmit : (values) => {
      values
     }
   })  
-  console.log(values)
+  console.log(handleSubmit)
 
   return (
     <div className='flex justify-center items-center bg-slate-300 rounded-sm '>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <input type="text" name="firstName" id="firstName" placeholder='enter your firstname here'
          className='border-solid border-2 border-sky-950 rounded-3xl p-2 mb-5' value={values.firstName}
          onChange={handleChange} onBlur={handleBlur}/>
@@ -55,6 +55,8 @@ const SignUp = () => {
         border-solid border-2 border-sky-950 rounded-3xl' value={values.confirm_password}
         onChange={handleChange} onBlur={handleBlur}/>
         <br />
+        {/* type must be submit .. so onsubmit can actually work out */}
+        <button type='submit'>SignUp</button>
       </form>
     </div>
   )
