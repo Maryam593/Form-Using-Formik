@@ -44,57 +44,59 @@ const SignUp = () => {
 
 
   return (
-    <div className='flex justify-center items-center rounded-sm '>
-      <form action="" onSubmit={handleSubmit}>
-        <div className="firstName bg-stone-700  w-96">
+    <div className='flex justify-center items-center m-auto w-full '>
+      
+      <form action="" onSubmit={handleSubmit} className='bg-white mx-auto min-h-[640px] rounded-md mt-16'>
+      <h1 className='text-center p-2'>Welcome!</h1>
+        <div className="firstName w-96 mt-14 rounded-md">
         <input type="text" name="firstName" id="firstName" placeholder='enter your firstname here'
-         className='border-solid border-2 border-sky-950  p-2 mb-5 text-center mx-auto mt-2 w-96' value={values.firstName}
+         className='border-solid border-2 border-gray-400  p-2 mb-2 text-center ml-10  mt-2 w-80 rounded-3xl' value={values.firstName}
          onChange={handleChange} onBlur={handleBlur}
          
          />
           {touched.firstName && errors.firstName ? (
-                      <p className="form-error text-red-900">{errors.firstName}</p>
+                      <p className="text-red-900 text-center">{errors.firstName}</p>
                     ) : null}
         </div>
-        <br />
+      
        <div className="surName">
-       <input type="text" name="surName" id="surName" placeholder='enter your surname here' className='border-b-2 p-2  mb-5
-        border-solid border-2 border-sky-950 rounded-3xl' value={values.surName}
-        onChange={handleChange} onBlur={handleBlur} />
+       <input type="text" name="surName" id="surName" placeholder='enter your surname here'
+        className='border-solid border-2 border-gray-400  p-2 mb-2 text-center ml-10  mt-2 w-80 rounded-3xl' value={values.surName}
+        onChange={handleChange} onBlur={handleBlur}  />
           {touched.surName && errors.surName ? (
-                      <p className="form-error text-red-900">{errors.surName}</p>
+                      <p className="form-error text-red-900 text-center">{errors.surName}</p>
                     ) : null}
        </div>
-        <br />
+      
       <div className="emaill">
-      <input type="email" name="email" id="email" placeholder='enter your email here' className='border-b-2 p-2  mb-5
-        border-solid border-2 border-sky-950 rounded-3xl' value={values.email}
+      <input type="email" name="email" id="email" placeholder='enter your email here'
+       className='border-solid border-2 border-gray-400  p-2 mb-2 text-center ml-10  mt-2 w-80 rounded-3xl' value={values.email}
         onChange={handleChange} onBlur={handleBlur} />
           {touched.email && errors.email ? (
-                      <p className="form-error text-red-900">{errors.email}</p>
+                      <p className="form-error text-red-900 text-center">{errors.email}</p>
                     ) : null}
       </div>
-        <br />
+      
        <div className="passwordd">
-       <input type="password" name="password" id="password" placeholder='enter your password here' className='border-b-2 p-2  mb-5
-        border-solid border-2 border-sky-950 rounded-3xl' value={values.password}
+       <input type="password" name="password" id="password" placeholder='enter your password here'
+        className='border-solid border-2 border-gray-400  p-2  text-center ml-10  mt-2 w-80 rounded-3xl' value={values.password}
         onChange={handleChange} onBlur={handleBlur}/>
         {touched.password && errors.password ? (
-                      <p className="form-error text-red-900">{errors.password}</p>
+                      <p className="form-error text-red-900 text-center">{errors.password}</p>
                     ) : null}
        </div>
         <br />
         <div className="confirmPasswordd">
-        <input type="password" name="confirm_password" id="confirmPassword" placeholder='match the password' className='border-b-2 p-2  mb-5
-        border-solid border-2 border-sky-950 rounded-3xl' value={values.confirm_password}
+        <input type="password" name="confirm_password" id="confirmPassword" placeholder='match the password'
+         className='border-solid border-2 border-gray-400  p-2  text-center ml-10  mt-2 w-80 rounded-3xl' value={values.confirm_password}
         onChange={handleChange} onBlur={handleBlur}/>
          {touched.confirm_password && errors.confirm_password ? (
-                      <p className="form-error text-red-900">{errors.confirm_password}</p>
+                      <p className="form-error text-red-900 text-center">{errors.confirm_password}</p>
                     ) : null}
         </div>
         <br />
         {/* type must be submit .. so onsubmit can actually work out */}
-        <button className="input-button bg-black text-white w-24 p-2" type="submit">
+        <button className="input-button bg-black text-white w-24 p-2 rounded-3xl ml-36" type="submit">
                       SignUp
                     </button>
       </form>
