@@ -46,9 +46,9 @@ const SignUp = () => {
   return (
     <div className='flex justify-center items-center m-auto w-full '>
       
-      <form action="" onSubmit={handleSubmit} className='bg-white mx-auto min-h-[640px] rounded-md mt-16'>
-      <h1 className='text-center p-2'>Welcome!</h1>
-        <div className="firstName w-96 mt-14 rounded-md">
+      <form action="" onSubmit={handleSubmit} className='bg-white mx-auto min-h-[640px] rounded-md mt-20'>
+      <h1 className='text-center mt-10 font-bold texr-3xl mb-10'>Welcome!</h1>
+        <div className="firstName w-96  rounded-md">
         <input type="text" name="firstName" id="firstName" placeholder='enter your firstname here'
          className='border-solid border-2 border-gray-400  p-2 mb-2 text-center ml-10  mt-2 w-80 rounded-3xl' value={values.firstName}
          onChange={handleChange} onBlur={handleBlur}
@@ -85,16 +85,16 @@ const SignUp = () => {
                       <p className="form-error text-red-900 text-center">{errors.password}</p>
                     ) : null}
        </div>
-        <br />
+       
         <div className="confirmPasswordd">
         <input type="password" name="confirm_password" id="confirmPassword" placeholder='match the password'
-         className='border-solid border-2 border-gray-400  p-2  text-center ml-10  mt-2 w-80 rounded-3xl' value={values.confirm_password}
+         className='border-solid border-2 border-gray-400  p-2  text-center ml-10  mt-4 w-80 rounded-3xl' value={values.confirm_password}
         onChange={handleChange} onBlur={handleBlur}/>
          {touched.confirm_password && errors.confirm_password ? (
                       <p className="form-error text-red-900 text-center">{errors.confirm_password}</p>
                     ) : null}
         </div>
-        <br />
+       <br />
         {/* type must be submit .. so onsubmit can actually work out */}
         <button className="input-button bg-black text-white w-24 p-2 rounded-3xl ml-36" type="submit">
                       SignUp
